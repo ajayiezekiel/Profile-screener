@@ -8,10 +8,11 @@ const Users = ({users, loading}) => {
     } else {
         return (
             <div className='grid-3'>
-                {users.map(user => 
-                    (<UserItem key={user.Email} user={user} />)
+                {users.map((user, idx) => 
+                    (<UserItem key={idx} user={user}/>)
                 )}         
             </div>
+            
         )
     }    
 };
